@@ -25,10 +25,13 @@ public class Book {
 	private String title;
 	@Column(nullable = false)
 	private String author;
+	@Column(nullable = false)
+	private String font;
 	
 	@Builder
-	public Book(String title, String author) {
+	public Book(String title, String author, String font) {
 		this.title = title;
 		this.author = author;
+		this.font = font;
 	}
 }
