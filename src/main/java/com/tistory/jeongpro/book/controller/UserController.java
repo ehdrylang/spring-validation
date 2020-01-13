@@ -25,7 +25,7 @@ public class UserController {
 	}
 	
 	@ResponseStatus(HttpStatus.BAD_REQUEST)
-	@ExceptionHandler(ConstraintViolationException.class)
+	@ExceptionHandler(ConstraintViolationException.class) 
 	public Object exception(Exception e) {
 		return e.getMessage();
 	}
