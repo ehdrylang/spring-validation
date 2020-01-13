@@ -14,7 +14,7 @@ import javax.validation.Payload;
 @Target({ ElementType.METHOD, ElementType.FIELD })
 @Retention(RetentionPolicy.RUNTIME)
 public @interface FontConstraint {
-	String message() default "Invalid URL";
+	String message() default "Invalid Font";
 	Class<?>[] groups() default {};
 	Class<? extends Payload>[] payload() default {};
 }

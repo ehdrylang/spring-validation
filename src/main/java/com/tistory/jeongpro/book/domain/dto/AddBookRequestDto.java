@@ -1,5 +1,6 @@
 package com.tistory.jeongpro.book.domain.dto;
 
+import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -26,6 +27,9 @@ public class AddBookRequestDto {
 	@NotNull(message = "font is not null")
 	@FontConstraint(message = "this font cannot be used")
 	private String font;
+	
+	@Valid
+	private InnerObject innerObject;
 	
 	public Book toEntity() {
 		return Book.builder()
